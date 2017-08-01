@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'GuildofProfessionalActors';
+  src: url('fonts/GuildofProfessionalActors.woff') format('woff'),
+       url('fonts/GuildofProfessionalActors.ttf') format('truetype'),
+       url('fonts/GuildofProfessionalActors.svg#GuildofProfessionalActors') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EllipticaLight';
+  src: url('fonts/EllipticaLight.woff') format('woff'),
+       url('fonts/EllipticaLight.ttf') format('truetype'),
+       url('fonts/EllipticaLight.svg#EllipticaLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin-bottom: 26px;
+}
+body.padded {
+    padding-top: 50px;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.imageBig {
+    width: 100%;
+}
+
+.imageSmall {
+    width: 100%;
+    /* More in @media section (large) */
+}
+
+.imageAlignLeft {
+    text-align: center;
+    /* More in @media section (large) */
+}
+.imageAlignRight {
+    text-align: center;
+    /* More in @media section (large) */
+}
+
+@media (min-width: 992px) {
+    /* Large */
+    .imageSmall {
+        width: 470px;
+    }
+    .imageAlignLeft {
+        text-align: left;
+    }
+    .imageAlignRight {
+        text-align: right;
+    }
+}
+
+.panel-inline {
+    display: inline-block;
+}
+
+.sizeLabel {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+figure {
+    display: inline;
+    margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #220c04;
+    font-family: 'EllipticaLight', Verdana, sans-serif;
+    font-size: medium;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #37231b;
+}
+
+.titleName {
+    font-family: 'GuildofProfessionalActors', 'Comic Sans MS', fantasy;
+    font-size: 5em;
+}
+
+.titleEmail {
+    font-family: 'EllipticaLight', Verdana, sans-serif;
+    font-size: medium;
+}
+
+.affix {
+    min-width: 100%;
+    top: 0px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 26px;
+}
+
+.popover {
+  max-width: 600px;
+  width: auto;
+}
+
+.slick-next {
+    right: 15px;
+}
+
+.slick-prev {
+    left: 15px;
+}
+
+.slick-arrow {
+    z-index: 100;
+}

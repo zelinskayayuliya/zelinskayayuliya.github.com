@@ -2,24 +2,22 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zelinskaya Yuliya</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css" />
-    <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css" />
-    <script type="text/javascript" src="/PhotoSwipe/photoswipe.min.js"></script>
-    <script type="text/javascript" src="/PhotoSwipe/photoswipe-ui-default.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css.css">
-</head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zelinskaya Yuliya</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="/css.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script><link rel="stylesheet" href="/PhotoSwipe/photoswipe.css" />
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css" />
+<script type="text/javascript" src="/PhotoSwipe/photoswipe.min.js"></script>
+<script type="text/javascript" src="/PhotoSwipe/photoswipe-ui-default.min.js"></script>
+<script type="text/javascript" src="/photoswipeInit.js"></script></head>
 
 <body class="padded">
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div id="topNavbar" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,14 +29,19 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="/paintings/">All paintings</a></li>
-                    <li><a href="/exhibitions/">Exhibitions</a></li>
-                    <li><a href="/biography.en/">Biography</a></li>
+                    <li class="active">
+                        <a href="/paintings/">All paintings</a>
+                    </li>
+                    <li>
+                        <a href="/exhibitions/">Exhibitions</a>
+                    </li>
+                    <li>
+                        <a href="/biography.en/">Biography</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div>    <div class="container">
         <div class="panel-group paintings photoSwipeGallery" itemscope itemtype="http://schema.org/ImageGallery">
                 <div class="panel"><div class="panel-body"><div class="row">
                     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -1191,8 +1194,8 @@
             <p class="text-muted small">Site made in <a href="#nafanya" data-content='<img src="/nafanya.jpg" />' id="nafanya">Nafanya studio</a></p>
         </div>
     </footer>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter32183369 = new Ya.Metrika({ id:32183369, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/32183369" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <script type="text/javascript" src="/nafanya.js"></script>
-    <script type="text/javascript" src="/photoswipeInit.js"></script>
 </body>
 
 </html>

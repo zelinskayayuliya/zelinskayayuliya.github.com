@@ -8,7 +8,6 @@
 <title>Zelinskaya Yuliya</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" crossorigin="anonymous" />
-<link rel="stylesheet" type="text/css" href="/css.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script><link rel="stylesheet" href="/PhotoSwipe/photoswipe.css" />
 <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css" />
@@ -17,6 +16,7 @@
 <script type="text/javascript" src="/photoswipeInit.js"></script>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -52,7 +52,7 @@
             <div class="container-fluid carouselContainer">
                 <div id="paintingsCarousel">
                         <div class="photoSwipeGallery">
-                                <img src="../exhibitions//fd635d56-05ba-5714-a5a9-cd39c2077cd1/carousel.jpg">
+                                <img class="imageSmall" src="../exhibitions//fd635d56-05ba-5714-a5a9-cd39c2077cd1/carousel.jpg">
                         </div>
                         <div class="photoSwipeGallery">
                                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -66,7 +66,7 @@
                                 </figure>
                         </div>
                         <div class="photoSwipeGallery">
-                                <img src="../exhibitions//85375534-3da0-5c43-a706-b97aa8c5280c/carousel2.jpg">
+                                <img class="imageSmall" src="../exhibitions//85375534-3da0-5c43-a706-b97aa8c5280c/carousel2.jpg">
                         </div>
                         <div class="photoSwipeGallery">
                                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -80,7 +80,7 @@
                                 </figure>
                         </div>
                         <div class="photoSwipeGallery">
-                                <img src="../exhibitions//0fd0c5bd-97aa-5815-b7f8-812060c0dd1d/carousel1.jpg">
+                                <img class="imageSmall" src="../exhibitions//0fd0c5bd-97aa-5815-b7f8-812060c0dd1d/carousel1.jpg">
                         </div>
                         <div class="photoSwipeGallery">
                                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -94,7 +94,7 @@
                                 </figure>
                         </div>
                         <div class="photoSwipeGallery">
-                                <img src="../exhibitions//f1eda9ec-29e2-5bf7-a5ca-d948d3fffabc/carousel3.jpg">
+                                <img class="imageSmall" src="../exhibitions//f1eda9ec-29e2-5bf7-a5ca-d948d3fffabc/carousel3.jpg">
                         </div>
                         <div class="photoSwipeGallery">
                                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -212,8 +212,8 @@
                             </figure></div>
                     </div></div>
                     <p class="lead moreLinks">
-                        <a class="col-md-6" href="/paintings/">More paintings</a>
-                        <a class="col-md-6" href="/exhibitions/">Exhibitions and publications</a>
+                        <a href="/paintings/">More paintings</a>
+                        <a href="/exhibitions/">Exhibitions and publications</a>
                     </p>
                 </div>
                 <div class="aboutText">
@@ -224,6 +224,7 @@
                 </div>
                 <div class="text-center" id="contact">
                     <h1>Contact me</h1>
+                    <p class="lead">My e-mail: yuliya@zelinskaya-yuliya.com</p>
                     <form action="https://formspree.io/yuliya@zelinskaya-yuliya.com" method="POST">
                         <div class="list-group">
                             <div class="list-group-item">

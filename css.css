@@ -32,11 +32,11 @@ body.padded {
     position: relative;
 }
 
-.imageBig {
+.panel .imageBig {
     width: 100%;
 }
 
-.imageSmall {
+.panel .imageSmall {
     width: 100%;
     /* More in @media section (large) */
 }
@@ -52,7 +52,7 @@ body.padded {
 
 @media (min-width: 992px) {
     /* Large */
-    .imageSmall {
+    .panel .imageSmall {
         width: 470px;
     }
     .imageAlignLeft {
@@ -68,6 +68,10 @@ body.padded {
 
 .panel-inline {
     display: inline-block;
+}
+.panel-table {
+    display: table;
+    margin: auto;
 }
 
 .sizeLabel {

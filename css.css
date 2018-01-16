@@ -137,3 +137,49 @@ html {
 .slick-arrow {
     z-index: 100;
 }
+
+/*https://xieranmaya.github.io/images/cats/cats.html
+  https://github.com/xieranmaya/blog/issues/6
+  http://jsbin.com/wiwamaluse/edit?html,css,output*/
+.blogImages {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2px;
+}
+
+.blogImages > div {
+  margin: 2px;
+  position: relative;
+}
+
+.blogImages > div > i{
+  display: block;
+}
+
+.blogImages > div > .blogPicture {
+  position: absolute;
+  vertical-align: bottom;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blogImages > .placeholder {
+  flex-grow: 100;
+  flex-basis: 240px;
+  height: 0;
+}
+
+.blogMore:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.blogMore {
+  background: #CADABA;
+  margin: 0;
+}

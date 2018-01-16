@@ -1,12 +1,3 @@
-function relPathToAbs (sRelPath) {
-  var nUpLn, sDir = "", sPath = location.pathname.replace(/[^\/]*$/, sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"));
-  for (var nEnd, nStart = 0; nEnd = sPath.indexOf("/../", nStart), nEnd > -1; nStart = nEnd + nUpLn) {
-    nUpLn = /^\/(?:\.\.\/)*/.exec(sPath.slice(nEnd))[0].length;
-    sDir = (sDir + sPath.substring(nStart, nEnd)).replace(new RegExp("(?:\\\/+[^\\\/]*){0," + ((nUpLn - 1) / 3) + "}$"), "/");
-  }
-  return sDir + sPath.substr(nStart);
-}
-
 var galleryInit = function(galleryElem) {
 	// add PhotoSwipe (.pswp) element to DOM (minified)
 	var pswpElement = $('<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"> <div class="pswp__bg"></div><div class="pswp__scroll-wrap"> <div class="pswp__container"> <div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"> <div class="pswp__top-bar"> <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> <div class="pswp__preloader"> <div class="pswp__preloader__icn"> <div class="pswp__preloader__cut"> <div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"> <div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"> </button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"> </button> <div class="pswp__caption"> <div class="pswp__caption__center"></div></div></div></div></div>')
@@ -14,6 +5,11 @@ var galleryInit = function(galleryElem) {
 	
 	var items = []
 	var images = galleryElem.find('figure[itemtype="http://schema.org/ImageObject"]');
+
+	var galleryUid = galleryElem.attr("data-uid");
+	if (!galleryUid) {
+		galleryUid = 1;
+	}
 	images.each(function(index, item){
 		var itemElem = $(item);
 
@@ -28,10 +24,13 @@ var galleryInit = function(galleryElem) {
 		var smallSizeWidth = parseInt($(itemElem.find('meta[itemprop="width"]')[0]).attr("content"));
 		var smallSizeHeight = parseInt($(itemElem.find('meta[itemprop="height"]')[0]).attr("content"));
 
+		var imgPid = smallSizeElem.attr("data-pid");
+
 		var caption = $(itemElem.find('p[itemprop="caption"]')[0]).text();
 		var description = $(itemElem.find('p[itemprop="description"]')[0]).text();
 
 		items.push({
+			pid: imgPid,
 			src: fullSizeSrc,
 			w: fullSizeWidth,
 			h: fullSizeHeight,
@@ -53,7 +52,8 @@ var galleryInit = function(galleryElem) {
 					return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
 				},
 				index: idx,
-				history: false,
+				galleryUID: galleryUid,
+				history: true,
 				preload: [0, 0],
 				shareButtons: [
 					{id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
@@ -62,10 +62,10 @@ var galleryInit = function(galleryElem) {
 					{id:'download', label:'Download image', url:'{{raw_image_url}}', download:true}
 				],
 				getImageURLForShare: function( shareButtonData ) {
-					return relPathToAbs(item.src);
+					return item.src;
 				},
 				getPageURLForShare: function( shareButtonData ) {
-					return relPathToAbs(item.src);
+					return window.location.href;
 				},
 				getTextForShare: function( shareButtonData ) {
 					return item.title || '';
@@ -76,4 +76,8 @@ var galleryInit = function(galleryElem) {
 		});
 	});
 }
-$(window).on('load', function (){ galleryInit($(".photoSwipeGallery"))});
+$(window).on('load', function() {
+	$.each($.find(".photoSwipeGallery"), function(idx, el) {
+		galleryInit($(el))
+	})
+});

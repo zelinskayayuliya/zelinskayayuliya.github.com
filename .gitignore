@@ -1,1 +1,8 @@
 Thumbs.db
+biography.en.html
+biography.ru.html
+blog.html
+paintings.html
+exhibitions.html
+exhibitions/*.html
+!exhibitions/index.html

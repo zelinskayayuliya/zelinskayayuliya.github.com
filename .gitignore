@@ -4,5 +4,5 @@ biography.ru.html
 blog.html
 paintings.html
 exhibitions.html
-exhibitions/*.html
-!exhibitions/index.html
+blog/*.html
+!blog/index.html
